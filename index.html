@@ -1,0 +1,3493 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="张俊个人简历 - 信息管理与信息系统双学位，数据驱动型人才" />
+<title>张俊 · 个人简历 | 数据驱动 · 运营管理 · Web开发</title>
+<style>
+:root {
+  --color-canvas: #f0f4f8;
+  --color-surface: rgba(255, 255, 255, 0.72);
+  --color-surface-solid: #ffffff;
+  --color-text-primary: #1a2332;
+  --color-text-secondary: #4a5568;
+  --color-text-muted: #718096;
+  --color-accent: #2563eb;
+  --color-accent-light: #60a5fa;
+  --color-accent-bg: rgba(37, 99, 235, 0.08);
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-hover: rgba(0, 0, 0, 0.12);
+  --color-success: #10b981;
+  --color-highlight: #f59e0b;
+  --font-display: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-glass: 0 8px 32px rgba(37, 99, 235, 0.08);
+  --section-gap: clamp(64px, 10vw, 100px);
+  --content-width: min(1100px, 92vw);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-canvas);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ========== 动态背景 - 极光流动 ========== */
+.bg-aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-band {
+  position: absolute;
+  width: 200%;
+  height: 55%;
+  left: -50%;
+  filter: url(#aurora-blur);
+  opacity: 0.75;
+}
+
+.aurora-band-1 {
+  top: -5%;
+  background: linear-gradient(110deg,
+    transparent 0%,
+    rgba(56, 189, 248, 0.55) 15%,
+    rgba(129, 140, 248, 0.5) 30%,
+    rgba(52, 211, 153, 0.45) 50%,
+    rgba(56, 189, 248, 0.5) 70%,
+    rgba(96, 165, 250, 0.4) 85%,
+    transparent 100%
+  );
+  animation: auroraSway1 12s ease-in-out infinite alternate;
+}
+
+.aurora-band-2 {
+  top: 18%;
+  background: linear-gradient(70deg,
+    transparent 0%,
+    rgba(167, 139, 250, 0.5) 10%,
+    rgba(96, 165, 250, 0.55) 25%,
+    rgba(56, 189, 248, 0.45) 45%,
+    rgba(167, 139, 250, 0.4) 65%,
+    rgba(129, 230, 217, 0.35) 80%,
+    transparent 100%
+  );
+  animation: auroraSway2 15s ease-in-out infinite alternate;
+}
+
+.aurora-band-3 {
+  top: 45%;
+  background: linear-gradient(130deg,
+    transparent 0%,
+    rgba(52, 211, 153, 0.5) 20%,
+    rgba(129, 230, 217, 0.55) 35%,
+    rgba(96, 165, 250, 0.4) 55%,
+    rgba(52, 211, 153, 0.45) 75%,
+    rgba(56, 189, 248, 0.3) 90%,
+    transparent 100%
+  );
+  animation: auroraSway3 18s ease-in-out infinite alternate;
+}
+
+.aurora-band-4 {
+  top: 65%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(244, 114, 182, 0.3) 15%,
+    rgba(167, 139, 250, 0.4) 35%,
+    rgba(96, 165, 250, 0.35) 55%,
+    rgba(244, 114, 182, 0.3) 75%,
+    transparent 100%
+  );
+  animation: auroraSway4 21s ease-in-out infinite alternate;
+}
+
+@keyframes auroraSway1 {
+  0%   { transform: translateX(-15%) translateY(-5%) skewY(-3deg) scaleY(1); }
+  25%  { transform: translateX(12%) translateY(-12%) skewY(5deg) scaleY(1.15); }
+  50%  { transform: translateX(-12%) translateY(8%) skewY(-2deg) scaleY(0.9); }
+  75%  { transform: translateX(15%) translateY(-5%) skewY(3deg) scaleY(1.1); }
+  100% { transform: translateX(-8%) translateY(-10%) skewY(-4deg) scaleY(1.12); }
+}
+
+@keyframes auroraSway2 {
+  0%   { transform: translateX(12%) translateY(0) skewY(3deg) scaleX(1); }
+  30%  { transform: translateX(-18%) translateY(10%) skewY(-3deg) scaleX(1.08); }
+  60%  { transform: translateX(10%) translateY(-8%) skewY(4deg) scaleX(0.92); }
+  100% { transform: translateX(-10%) translateY(12%) skewY(-2deg) scaleX(1.05); }
+}
+
+@keyframes auroraSway3 {
+  0%   { transform: translateX(-10%) translateY(0) skewY(-2deg); }
+  40%  { transform: translateX(16%) translateY(-15%) skewY(5deg); }
+  70%  { transform: translateX(-8%) translateY(6%) skewY(-4deg); }
+  100% { transform: translateX(12%) translateY(-8%) skewY(3deg); }
+}
+
+@keyframes auroraSway4 {
+  0%   { transform: translateX(8%) translateY(0) skewY(2deg); }
+  50%  { transform: translateX(-14%) translateY(10%) skewY(-3deg); }
+  100% { transform: translateX(6%) translateY(-8%) skewY(2.5deg); }
+}
+  100% { transform: scale(1.1) translate(-10px, 15px); opacity: 0.12; }
+}
+
+/* 底部波浪保留 */
+.bg-waves {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ========== 导航栏 ========== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 12px 0;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.nav-inner {
+  width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--color-text-primary);
+}
+
+/* ========== 内容主体 ========== */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  padding: var(--section-gap) 0;
+}
+
+.container {
+  width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* ========== Hero首屏 ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -160px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--color-surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-success);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.8); }
+}
+
+.hero-name {
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.8s 0.15s ease both;
+}
+
+.hero-subtitle {
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.8s 0.3s ease both;
+}
+
+.hero-desc {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto 36px;
+  animation: fadeInUp 0.8s 0.45s ease both;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+  animation: fadeInUp 0.8s 0.6s ease both;
+}
+
+.hero-tag {
+  padding: 6px 16px;
+  background: var(--color-surface);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: all 0.25s ease;
+}
+
+.hero-tag:hover {
+  border-color: var(--color-accent-light);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* 数字计数器 */
+/* 水平时间轴排版 */
+.hero-timeline-bar {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  animation: fadeInUp 0.8s 0.75s ease both;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 18px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-node:hover {
+  transform: translateY(-4px);
+}
+
+.timeline-node-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+}
+
+.timeline-node-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.node-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.node-sub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.timeline-connector {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-light), var(--color-accent-light));
+  opacity: 0.4;
+  flex-shrink: 0;
+  margin-bottom: 30px;
+}
+
+/* Hero 交互按钮 */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-action-primary {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.35);
+}
+
+.hero-action-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
+}
+
+.hero-action-primary:active {
+  transform: translateY(-1px);
+}
+
+.hero-action-secondary {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.hero-action-secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero-action-secondary:hover .btn-arrow {
+  transform: translateY(3px);
+}
+
+.hero-action-btn .btn-icon {
+  font-size: 18px;
+}
+
+.hero-action-btn .btn-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* 向下滚动提示 */
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 40px;
+  cursor: pointer;
+  animation: scrollBounce 2s ease-in-out infinite;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-hint:hover {
+  opacity: 1;
+}
+
+.scroll-hint-text {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+}
+
+.scroll-hint-arrow {
+  color: var(--color-accent);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== 板块标题 ========== */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ========== 核心竞争力 ========== */
+.core-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.core-card {
+  padding: 24px 18px;
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.core-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.core-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.core-card:hover::before {
+  transform: scaleX(1);
+}
+
+.core-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+  font-size: 20px;
+  background: var(--color-accent-bg);
+}
+
+.core-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.core-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ========== 工作经历时间轴 ========== */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent-light), var(--color-border));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-surface-solid);
+  border: 3px solid var(--color-accent);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--color-accent);
+  transform: scale(1.3);
+}
+
+.timeline-card {
+  padding: 24px;
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-accent-light);
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.timeline-company {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.timeline-role {
+  font-size: 13px;
+  color: var(--color-accent);
+  background: var(--color-accent-bg);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.timeline-date {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-left: auto;
+}
+
+.timeline-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.highlight-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--color-success);
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.timeline-content {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-content li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+
+.timeline-content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background: var(--color-accent-light);
+  border-radius: 50%;
+}
+
+.exp-block {
+  margin-bottom: 14px;
+  padding-left: 14px;
+  border-left: 2px solid var(--color-accent-light);
+}
+
+.exp-block h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 4px 0;
+}
+
+.exp-block p {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ========== 项目经历 ========== */
+.project-tabs-nav {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  padding: 6px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 18px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: var(--color-text);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.tab-btn .tab-icon {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.tab-btn .tab-label {
+  display: block;
+  line-height: 1.3;
+}
+
+.tab-panels {
+  position: relative;
+  min-height: 400px;
+}
+
+.tab-panel {
+  display: none;
+  opacity: 0;
+}
+
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+.tab-panel.scale-in {
+  animation: tabScaleIn 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.tab-panel.scale-out {
+  animation: tabScaleOut 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes tabScaleIn {
+  from { opacity: 0; transform: scale(1.06); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes tabScaleOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.94); }
+}
+
+.project-card {
+  padding: 32px;
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.project-card:hover .project-arrow {
+  transform: translate(3px, -3px);
+}
+
+.project-type {
+  font-size: 12px;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  color: var(--color-accent);
+}
+
+.project-desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.project-detail {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  background: rgba(59, 130, 246, 0.04);
+  border-radius: 8px;
+  border-left: 3px solid var(--color-accent-light);
+}
+
+.project-detail-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.project-detail p {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 环形图表 */
+.project-chart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: var(--color-bg);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.chart-ring {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.chart-ring-bg {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 8;
+}
+
+.chart-ring-fill {
+  fill: none;
+  stroke: url(#chartGradient);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-ring-fill.green {
+  stroke: url(#chartGradient2);
+}
+
+.chart-center-text {
+  font-size: 18px;
+  font-weight: 700;
+  fill: var(--color-text);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.chart-info {
+  flex: 1;
+}
+
+.chart-info-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.chart-info-desc {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* 悬浮标签（项目卡片内） */
+.project-float-tags {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin-top: 12px;
+  pointer-events: none;
+}
+
+.project-float-tags .float-tag {
+  position: absolute;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  animation: floatTagBounce 3s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+}
+
+.project-float-tags .float-tag:hover {
+  transform: scale(1.15) !important;
+}
+
+.project-float-tags .float-tag:nth-child(1) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  top: 5px;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.project-float-tags .float-tag:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  top: 20px;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.project-float-tags .float-tag:nth-child(3) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  top: 5px;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+@keyframes floatTagBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.project-detail p strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.project-gallery {
+  margin: 20px 0;
+}
+
+.project-gallery-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  padding-left: 10px;
+  border-left: 3px solid var(--color-accent);
+}
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.project-gallery-grid:has(.project-gallery-item:only-child) {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+}
+
+.project-gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: all 0.3s ease;
+}
+
+.project-gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.project-gallery-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.project-gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-caption {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  background: rgba(59, 130, 246, 0.03);
+}
+
+/* ========== 项目布局变体 ========== */
+
+/* 通用：全宽头部 */
+.project-header-full {
+  margin-bottom: 24px;
+}
+
+.project-header-full h3 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+/* 通用：左右分栏容器 */
+.project-split-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.project-text-col .project-detail {
+  margin-bottom: 16px;
+}
+
+.project-visual-col {
+  position: sticky;
+  top: 20px;
+}
+
+/* 项目1：图片网格 */
+.gallery-grid-2 {
+  grid-template-columns: 1fr !important;
+}
+
+.gallery-grid-2 .project-gallery-item {
+  margin-bottom: 16px;
+}
+
+.gallery-grid-2 .project-gallery-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 项目2：图表焦点布局 */
+.project-layout-chart-focus .project-split-content {
+  grid-template-columns: 1fr 0.8fr;
+}
+
+.visual-col-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.chart-ring-large {
+  width: 140px;
+  height: 140px;
+}
+
+.chart-ring-large svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-ring-bg-large {
+  fill: none;
+  stroke: rgba(99, 102, 241, 0.15);
+  stroke-width: 10;
+}
+
+.chart-ring-fill-large {
+  fill: none;
+  stroke: url(#chartGradient);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-ring-fill-large.green {
+  stroke: url(#chartGradient2);
+}
+
+.chart-center-text-large {
+  font-size: 28px;
+  font-weight: 700;
+  fill: var(--color-text-primary);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.chart-showcase-info {
+  text-align: center;
+}
+
+.chart-showcase-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.chart-showcase-desc {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.float-tags-showcase {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.float-tag-showcase {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  animation: floatTagBounce 3s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.float-tag-showcase:hover {
+  transform: scale(1.15);
+}
+
+.tag-gmv {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation-delay: 0s;
+}
+
+.tag-roi {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  animation-delay: 1s;
+}
+
+.tag-cac {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  animation-delay: 2s;
+}
+
+/* 项目3：分块布局 */
+/* 项目3：三栏卡片式布局 */
+.project-layout-threecard .threecard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 8px 0 16px;
+}
+
+.threecard-item {
+  position: relative;
+  border-radius: 14px;
+  background: var(--color-surface-solid);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.threecard-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.card-color-band {
+  height: 4px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.card-blue .card-color-band {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.card-purple .card-color-band {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+
+.card-green .card-color-band {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.card-body {
+  padding: 20px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  font-size: 26px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.card-blue .card-icon {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.card-purple .card-icon {
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.card-green .card-icon {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+
+.card-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* 项目4：两栏布局 */
+.project-layout-two-col .project-two-col-content {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.col-text .project-detail {
+  margin-bottom: 16px;
+}
+
+.col-visual {
+  display: flex;
+  align-items: center;
+}
+
+.result-showcase {
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(251, 191, 36, 0.08) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  text-align: center;
+}
+
+.result-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.result-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.result-showcase p {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.result-showcase .project-metrics {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* 项目5：图片顶部布局 */
+.project-layout-image-top .project-image-top-gallery {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-item-full {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.gallery-item-full img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-layout-image-top .project-split-content {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+/* 响应式：平板 */
+@media (max-width: 900px) {
+  .project-split-content,
+  .project-layout-chart-focus .project-split-content,
+  .project-layout-two-col .project-two-col-content,
+  .project-layout-image-top .project-split-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-visual-col {
+    position: static;
+  }
+
+  .project-layout-two-col .project-two-col-content {
+    gap: 20px;
+  }
+
+  .result-showcase {
+    padding: 24px;
+  }
+}
+
+/* 响应式：手机 */
+@media (max-width: 600px) {
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-header-full h3 {
+    font-size: 18px;
+  }
+
+  .chart-showcase {
+    padding: 20px;
+  }
+
+  .chart-ring-large {
+    width: 120px;
+    height: 120px;
+  }
+
+  .project-layout-threecard .threecard-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gallery-item-full img {
+    max-height: 200px;
+  }
+}
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.metric-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-highlight);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tags span {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* ========== 教育背景 ========== */
+.edu-section {
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.edu-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.edu-schools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.edu-school {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.edu-school:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-accent-light);
+}
+
+.edu-school-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  background: linear-gradient(135deg, var(--color-accent-bg), rgba(96, 165, 250, 0.12));
+}
+
+.edu-school h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.edu-school .edu-major {
+  font-size: 14px;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.edu-school .edu-date {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.edu-school .edu-badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 4px 12px;
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-highlight);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.edu-courses {
+  margin-top: 8px;
+}
+
+.edu-courses-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.course-tag {
+  font-size: 12px;
+  padding: 5px 12px;
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--color-accent);
+  border-radius: 16px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.course-tag:hover {
+  background: var(--color-accent-bg);
+  transform: translateY(-2px);
+}
+
+/* ========== 自我介绍模块 ========== */
+#about {
+  padding: 80px 40px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  gap: 30px;
+  align-items: start;
+  position: relative;
+}
+
+.about-tags-left,
+.about-tags-right {
+  position: relative;
+  height: 500px;
+}
+
+.about-tags-left .float-tag:nth-child(1) {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.about-tags-left .float-tag:nth-child(2) {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  animation-delay: 1s;
+}
+
+.about-tags-left .float-tag:nth-child(3) {
+  position: absolute;
+  top: 48%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.about-tags-left .float-tag:nth-child(4) {
+  position: absolute;
+  top: 68%;
+  left: 5%;
+  animation-delay: 0.5s;
+}
+
+.about-tags-left .float-tag:nth-child(5) {
+  position: absolute;
+  top: 85%;
+  left: 12%;
+  animation-delay: 1.5s;
+}
+
+.about-tags-right .float-tag:nth-child(1) {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  animation-delay: 0.3s;
+}
+
+.about-tags-right .float-tag:nth-child(2) {
+  position: absolute;
+  top: 30%;
+  right: 12%;
+  animation-delay: 1.2s;
+}
+
+.about-tags-right .float-tag:nth-child(3) {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  animation-delay: 0.8s;
+}
+
+.about-tags-right .float-tag:nth-child(4) {
+  position: absolute;
+  top: 78%;
+  right: 8%;
+  animation-delay: 1.8s;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.about-content {
+  color: #475569;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  text-indent: 2em;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-text {
+  font-weight: 700;
+  color: #1e40af;
+  background: linear-gradient(120deg, #3b82f6, #8b5cf6, #3b82f6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.float-tag {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  animation: floatTag var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.float-tag:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+}
+
+@keyframes floatTag {
+  0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+  25% { transform: translateY(-6px) translateX(3px) rotate(1deg); }
+  50% { transform: translateY(-10px) translateX(-2px) rotate(-1deg); }
+  75% { transform: translateY(-4px) translateX(4px) rotate(2deg); }
+}
+
+.about-tags-left .float-tag:nth-child(1) { animation-delay: 0s; }
+.about-tags-left .float-tag:nth-child(2) { animation-delay: 1s; }
+.about-tags-left .float-tag:nth-child(3) { animation-delay: 2s; }
+.about-tags-left .float-tag:nth-child(4) { animation-delay: 0.5s; }
+.about-tags-left .float-tag:nth-child(5) { animation-delay: 1.5s; }
+
+.about-tags-right .float-tag:nth-child(1) { animation-delay: 0.3s; }
+.about-tags-right .float-tag:nth-child(2) { animation-delay: 1.2s; }
+.about-tags-right .float-tag:nth-child(3) { animation-delay: 0.8s; }
+.about-tags-right .float-tag:nth-child(4) { animation-delay: 1.8s; }
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-tags-left,
+  .about-tags-right {
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .about-tags-left .float-tag,
+  .about-tags-right .float-tag {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  .about-card {
+    padding: 32px 24px;
+  }
+
+  .about-content p {
+    text-indent: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .float-tag {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}
+
+/* ========== 视频模块 ========== */
+.about-video {
+  max-width: 700px;
+  margin: 50px auto 0;
+}
+
+.video-preview {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+.video-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  transition: background 0.3s;
+}
+
+.video-preview:hover .video-overlay {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+}
+
+.play-btn {
+  transition: transform 0.3s;
+}
+
+.video-preview:hover .play-btn {
+  transform: scale(1.1);
+}
+
+.play-btn svg {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.video-hint {
+  margin-top: 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 视频灯箱 */
+.video-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.video-lightbox.active {
+  display: flex;
+}
+
+.video-lightbox video {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .about-video {
+    margin: 40px auto 0;
+  }
+
+  .video-lightbox {
+    padding: 20px;
+  }
+
+  .lightbox-close {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* ========== 技能矩阵 ========== */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-item {
+  padding: 22px;
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-accent-light);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.skill-level {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  border-radius: 3px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.skill-tags span {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  border-radius: 8px;
+}
+
+/* ========== 资质证书 ========== */
+.certs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.cert-badge:hover {
+  border-color: var(--color-accent-light);
+  transform: translateY(-2px);
+}
+
+.cert-icon {
+  font-size: 18px;
+}
+
+/* ========== 联系方式 ========== */
+.contact-section {
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  padding: 20px;
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 32px 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== 滚动动画 ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== prefers-reduced-motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .bg-aurora, .bg-waves {
+    display: none;
+  }
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero-info-magazine {
+    margin-top: 28px;
+  }
+  .magazine-highlight {
+    font-size: 20px;
+  }
+  .magazine-normal {
+    font-size: 14px;
+  }
+
+  .edu-schools {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-section {
+    padding: 24px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-dot {
+    left: -20px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-date {
+    margin-left: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .core-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-timeline-bar {
+    gap: 0;
+  }
+
+  .timeline-connector {
+    width: 20px;
+    margin-bottom: 26px;
+  }
+
+  .timeline-node {
+    padding: 10px 8px;
+  }
+
+  .timeline-node-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .node-label {
+    font-size: 12px;
+  }
+
+  .node-sub {
+    font-size: 10px;
+  }
+
+  .core-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .core-card h3 {
+    font-size: 14px;
+  }
+
+  .core-card p {
+    font-size: 12px;
+  }
+}
+
+/* ========== 商业海报展示 ========== */
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.poster-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  transition: all 0.35s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.poster-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-accent-light);
+}
+
+.poster-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.poster-card:hover img {
+  transform: scale(1.03);
+}
+
+.poster-caption {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* ========== 灯箱 ========== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: zoom-out;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========== 打印样式 ========== */
+@media print {
+  .bg-aurora, .bg-waves, .nav, .lightbox {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: #000;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  section {
+    padding: 20px 0;
+    break-inside: avoid;
+  }
+
+  .timeline-item, .project-card, .core-card, .skill-item, .edu-school {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+</style>
+</head>
+<body>
+  <!-- SVG 图表渐变定义 -->
+  <svg width="0" height="0" viewBox="0 0 0 0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="chartGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+<!-- 动态背景：极光流动 -->
+<div class="bg-aurora" aria-hidden="true">
+  <svg style="position:absolute;width:0;height:0" viewBox="0 0 1 1" aria-hidden="true">
+    <defs>
+      <filter id="aurora-blur">
+        <feGaussianBlur stdDeviation="60" />
+      </filter>
+    </defs>
+  </svg>
+  <div class="aurora-band aurora-band-1"></div>
+  <div class="aurora-band aurora-band-2"></div>
+  <div class="aurora-band aurora-band-3"></div>
+  <div class="aurora-band aurora-band-4"></div>
+</div>
+
+<!-- SVG波浪装饰 -->
+<svg class="bg-waves" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+  <path fill="rgba(59, 130, 246, 0.06)" d="M0,120 C360,180 720,60 1080,120 C1260,150 1380,100 1440,120 L1440,200 L0,200 Z">
+    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+      M0,120 C360,180 720,60 1080,120 C1260,150 1380,100 1440,120 L1440,200 L0,200 Z;
+      M0,140 C360,80 720,160 1080,100 C1260,80 1380,140 1440,120 L1440,200 L0,200 Z;
+      M0,120 C360,180 720,60 1080,120 C1260,150 1380,100 1440,120 L1440,200 L0,200 Z
+    " />
+  </path>
+  <path fill="rgba(6, 182, 212, 0.04)" d="M0,150 C480,100 960,180 1440,140 L1440,200 L0,200 Z">
+    <animate attributeName="d" dur="15s" repeatCount="indefinite" values="
+      M0,150 C480,100 960,180 1440,140 L1440,200 L0,200 Z;
+      M0,130 C480,180 960,100 1440,160 L1440,200 L0,200 Z;
+      M0,150 C480,100 960,180 1440,140 L1440,200 L0,200 Z
+    " />
+  </path>
+</svg>
+
+<!-- 导航 -->
+<nav class="nav" role="navigation" aria-label="主导航">
+  <div class="nav-inner">
+    <div class="nav-logo">ZJ</div>
+    <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/>
+      </svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">首页</a></li>
+      <li><a href="#about">关于我</a></li>
+      <li><a href="#core">优势</a></li>
+      <li><a href="#experience">经历</a></li>
+      <li><a href="#projects">项目</a></li>
+      <li><a href="#education">教育</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#posters">海报</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero首屏 -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span>正在寻找新机会</span>
+      </div>
+      <h1 class="hero-name">张俊</h1>
+      <p class="hero-subtitle">数据驱动型 · 信息管理与信息系统双学位</p>
+      <p class="hero-desc">上海海洋大学（双一流）& 塔斯马尼亚大学联合培养，擅长用数据与技术驱动业务判断。严谨细致、结果导向，致力于让每一份数据真实可信。</p>
+      <div class="hero-tags">
+        <span class="hero-tag">📊 数据驱动</span>
+        <span class="hero-tag">🧠 逻辑严谨</span>
+        <span class="hero-tag">⚙️ 全栈落地</span>
+        <span class="hero-tag">🌏 双语双学位</span>
+        <span class="hero-tag">💡 结果导向</span>
+      </div>
+      <div class="hero-timeline-bar">
+        <div class="timeline-node">
+          <div class="timeline-node-icon">🎓</div>
+          <div class="timeline-node-text">
+            <span class="node-label">上海海洋大学</span>
+            <span class="node-sub">双学位</span>
+          </div>
+        </div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-node">
+          <div class="timeline-node-icon">📅</div>
+          <div class="timeline-node-text">
+            <span class="node-label">2024 届</span>
+            <span class="node-sub">应届毕业生</span>
+          </div>
+        </div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-node">
+          <div class="timeline-node-icon">💼</div>
+          <div class="timeline-node-text">
+            <span class="node-label">1.5 年经验</span>
+            <span class="node-sub">运营实战</span>
+          </div>
+        </div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-node">
+          <div class="timeline-node-icon">📍</div>
+          <div class="timeline-node-text">
+            <span class="node-label">上海普陀</span>
+            <span class="node-sub">现住址</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contact" class="hero-action-btn hero-action-primary" onclick="smoothScrollTo(event, 'contact')">
+          <span class="btn-icon">📬</span>
+          <span>联系我</span>
+        </a>
+        <a href="#about" class="hero-action-btn hero-action-secondary" onclick="smoothScrollTo(event, 'about')">
+          <span>了解更多</span>
+          <span class="btn-arrow">↓</span>
+        </a>
+      </div>
+
+      <div class="scroll-hint" onclick="smoothScrollTo(event, 'about')">
+        <span class="scroll-hint-text">向下滚动</span>
+        <div class="scroll-hint-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 3v14M4 12l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="video-lightbox" id="videoLightbox" onclick="closeVideoLightbox(event)">
+    <button class="lightbox-close" onclick="closeVideoLightbox(event)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <video controls autoplay>
+      <source src="self-intro.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- 自我介绍 -->
+  <section id="about">
+    <h2 class="section-title about-title">关于我</h2>
+    <div class="about-layout">
+      <div class="about-tags-left">
+        <span class="float-tag" style="--delay:0s;--duration:4s">数据驱动</span>
+        <span class="float-tag" style="--delay:1s;--duration:5s">HTML</span>
+        <span class="float-tag" style="--delay:2s;--duration:4.5s">AIGC</span>
+        <span class="float-tag" style="--delay:0.5s;--duration:5.2s">跨部门协作</span>
+        <span class="float-tag" style="--delay:1.5s;--duration:4.8s">双语背景</span>
+      </div>
+      <div class="about-card">
+        <div class="about-content">
+          <p>我是张俊，本科毕业于上海海洋大学信息管理与信息系统（中外合作双学位），接受中英双语教学，是一名<span class="highlight-text">文理复合型</span>求职者。</p>
+          <p>我既善于借助数字化工具探索创新工作模式，也具备扎实的文字功底，能够独立完成各类公文、材料的撰写工作。技术方面熟悉 HTML 网页开发、SQL 数据库操作；同时可运用 AIGC、秀米等工具，完成短视频剪辑、公众号内容创作。</p>
+          <p>过往积累了企业行政文职、市场数据分析、社区用户服务、线下活动统筹多维度实践经验，能够独立完成公文撰写、数字化台账搭建、业务数据汇总以及线下活动全流程落地执行。文理交叉的知识背景，让我兼具理性数据逻辑与良好的理解表达能力，推动各项工作闭环落地。</p>
+          <p>工作上我对数据敏感，处事细致严谨；拥有 B 端商户、普通居民等多类对象的沟通接待经验，擅长梳理需求、协调多方资源。学习适应能力较强，可以快速熟悉企业业务流程与内部业务系统，适配团队协作，也能够承担常态化运营复盘相关工作。</p>
+        </div>
+      </div>
+      <div class="about-tags-right">
+        <span class="float-tag" style="--delay:0.3s;--duration:4.6s">文理复合</span>
+        <span class="float-tag" style="--delay:1.2s;--duration:5.5s">公文写作</span>
+        <span class="float-tag" style="--delay:0.8s;--duration:4.2s">商户沟通</span>
+        <span class="float-tag" style="--delay:1.8s;--duration:5s">快速学习</span>
+      </div>
+    </div>
+    <!-- 自我介绍视频 -->
+    <div class="about-video">
+      <div class="video-preview" onclick="openVideoLightbox()">
+        <video muted loop playsinline>
+          <source src="self-intro.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+              <circle cx="30" cy="30" r="28" fill="white" fill-opacity="0.95"/>
+              <path d="M24 18L44 30L24 42V18Z" fill="#3b82f6"/>
+            </svg>
+          </div>
+          <span class="video-hint">点击观看趣味介绍视频</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心竞争力 -->
+  <section id="core">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">核心竞争力</h2>
+        <p class="section-subtitle">把数据、技术与业务真正连在一起</p>
+      </div>
+      <div class="core-grid">
+        <div class="core-card reveal">
+          <div class="core-icon">📊</div>
+          <h3>数据驱动与校验</h3>
+          <p>以「准确率」为底线，擅长数据清洗、交叉校验与质控。历史纠错覆盖率达99%，交付数据可核可查。</p>
+        </div>
+        <div class="core-card reveal">
+          <div class="core-icon">💻</div>
+          <h3>技术+业务结合</h3>
+          <p>既懂代码也懂业务，能用爬虫、自动化脚本、Web开发解决运营与管理中的重复劳动问题。</p>
+        </div>
+        <div class="core-card reveal">
+          <div class="core-icon">🤝</div>
+          <h3>多方沟通协同能力</h3>
+          <p>具备丰富内外部对接实战经验，对外可完成B端商务谈判、C端用户服务；对内擅长跨部门协同联动，打通各方信息，保障项目高效落地。</p>
+        </div>
+        <div class="core-card reveal">
+          <div class="core-icon">📚</div>
+          <h3>持续学习与发展赋能</h3>
+          <p>主动钻研新技术与数字化工具，跟随社会主流，并落地到实际业务场景，借助数字化手段提效业务产出。曾制作动态花名册，协助提升考勤统计效率。</p>
+        </div>
+        <div class="core-card reveal">
+          <div class="core-icon">🌏</div>
+          <h3>国际化视野</h3>
+          <p>中澳双学位背景，中英双语教学，适应跨文化协作，能快速融入多元团队环境。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">工作经历</h2>
+        <p class="section-subtitle">在运营、质控、行政与社区一线积累的实践，数据始终贯穿其中</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">上海镁祺信息科技有限公司</span>
+              <span class="timeline-role">运营开拓</span>
+              <span class="timeline-date">2026.06 – 2026.09</span>
+            </div>
+            <div class="timeline-highlights">
+              <span class="highlight-tag">月均入驻 70+</span>
+              <span class="highlight-tag">入驻率 40%+</span>
+              <span class="highlight-tag">效率提升 90%+</span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-block">
+                <h4>门店开拓</h4>
+                <p>面向全国各地车后服务商户并与老板商务谈判，设计互利合作方案推进商户入驻平台，为顾客提供品质服务。完成合作协议签署落地，月均入驻量70+，门店有效入驻率保持40%以上。</p>
+              </div>
+              <div class="exp-block">
+                <h4>运营管理</h4>
+                <p>为入驻商户开展平台服务规范、线上操作流程培训；维护商户沟通渠道，消息1分钟内响应，高效解答商户业务疑问。联动内部多部门协同处理用户客诉，对接保养品类供应链，完成项目供货洽谈及成本议价工作。</p>
+              </div>
+              <div class="exp-block">
+                <h4>数据处理</h4>
+                <p>爬取地图数据，进行数据清洗与地理位置匹配，将标准化开拓数据清单提供给部门，提升效率有90%+。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">上海元上科技股份有限公司</span>
+              <span class="timeline-role">行政助理</span>
+              <span class="timeline-date">2025.10 – 2026.03</span>
+            </div>
+            <div class="timeline-highlights">
+              <span class="highlight-tag">公文落地率 100%</span>
+              <span class="highlight-tag">会议 20+ 场</span>
+              <span class="highlight-tag">日均 30+ 邮件</span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-block">
+                <h4>日常运作</h4>
+                <p>统筹公司办公后勤全流程，巡检办公设备、会议室、物资库存管理；日均处理30+积压邮件且标记重要信息。每周提交补充采购申请，核对领导每周行程表，提前准备相关业务材料，保障公司日常运转高效顺畅。</p>
+              </div>
+              <div class="exp-block">
+                <h4>文书撰写</h4>
+                <p>参与公司会议，保障20余场会议顺利开展，撰写会议纪要20余次；在节假日撰写通知通告类公文并确保落地率100%；每周收集各部门周报，汇总编制成简报初稿提交领导，支撑业务复盘。</p>
+              </div>
+              <div class="exp-block">
+                <h4>业务处理</h4>
+                <p>接待合作方、访客登记，每周承接30+业务咨询电话，做好需求记录与流转跟进；数字化归档上千份技术合作合同；使用Excel搭建员工考勤台账、办公用品进销存动态库存表，实现物资、人员数据可视化管理。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">普陀区宜川路街道社区事务受理服务中心</span>
+              <span class="timeline-role">见习岗</span>
+              <span class="timeline-date">2025.03 – 2025.09</span>
+            </div>
+            <div class="timeline-highlights">
+              <span class="highlight-tag">录入准确率 100%</span>
+              <span class="highlight-tag">档案 3000+ 份</span>
+              <span class="highlight-tag">日均接待 30+ 人次</span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-block">
+                <h4>数字化处理</h4>
+                <p>整理居民医保、补贴类纸质档案3000余份，完成信息录入与电子化台账搭建，核对数据准确性，数据录入准确率达100%。</p>
+              </div>
+              <div class="exp-block">
+                <h4>业务受理</h4>
+                <p>协助居民完成医疗补贴、残疾补助、护理服务等申请登记，日均接待咨询30余人次，引导自助设备操作，同步跟进业务办理进度通知。</p>
+              </div>
+              <div class="exp-block">
+                <h4>活动保障</h4>
+                <p>配合开展居民活动，负责场地布置、现场签到与秩序维护，活动结束后完成参与人员数据统计与汇总。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">上海安点企业管理咨询有限公司</span>
+              <span class="timeline-role">数据核查员</span>
+              <span class="timeline-date">2024.04 – 2024.08</span>
+            </div>
+            <div class="timeline-highlights">
+              <span class="highlight-tag">日均 500+ 条</span>
+              <span class="highlight-tag">纠错覆盖 99%</span>
+              <span class="highlight-tag">准确率 100%</span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-block">
+                <h4>数据校验</h4>
+                <p>审核市场部提交的业务物料数据，日均处理500+数据条目，识别并退回异常信息，同步标注错误原因指导整改，数据纠错覆盖率99%。</p>
+              </div>
+              <div class="exp-block">
+                <h4>数据清洗</h4>
+                <p>使用Excel完成每周订单数据清洗，包括去重、格式统一、异常值处理，将物料单据按规范分类打包。</p>
+              </div>
+              <div class="exp-block">
+                <h4>成果报送</h4>
+                <p>每周按时提交标准化数据包至上级，任职期间数据提交零延误，报送数据准确率保持100%。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目经历 -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">项目经历</h2>
+        <p class="section-subtitle">从数据采集到企业系统，从全栈开发到业务决策</p>
+      </div>
+      <!-- Tab 导航栏 -->
+      <div class="project-tabs-nav reveal">
+        <button class="tab-btn active" data-tab="project-1">
+          <span class="tab-icon">🔥</span>
+          <span class="tab-label">开拓需求热力图</span>
+        </button>
+        <button class="tab-btn" data-tab="project-2">
+          <span class="tab-icon">📊</span>
+          <span class="tab-label">电商数据爬取分析</span>
+        </button>
+        <button class="tab-btn" data-tab="project-3">
+          <span class="tab-icon">⚙️</span>
+          <span class="tab-label">SAP运营模拟</span>
+        </button>
+        <button class="tab-btn" data-tab="project-4">
+          <span class="tab-icon">💻</span>
+          <span class="tab-label">博客与寄养网站</span>
+        </button>
+        <button class="tab-btn" data-tab="project-5">
+          <span class="tab-icon">🤖</span>
+          <span class="tab-label">智能客服</span>
+        </button>
+      </div>
+
+      <!-- Tab 面板内容 -->
+      <div class="tab-panels reveal">
+        <!-- 项目1：左右分栏，左侧文字，右侧图片 -->
+        <div class="tab-panel active" id="project-1">
+          <div class="project-card project-layout-split">
+            <div class="project-header-full">
+              <div class="project-type">数据可视化 · 运营项目</div>
+              <h3>开拓需求热力图 <span class="project-arrow">↗</span></h3>
+            </div>
+            <div class="project-split-content">
+              <div class="project-text-col">
+                <div class="project-detail">
+                  <div class="project-detail-label">项目背景</div>
+                  <p>为支撑公司网格化门店开拓业务，厘清存量门店地理分布与业务缺口，通过可视化工具定位业务需求，为区域差异化开拓策略提供数据依据。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目内容</div>
+                  <p><strong>热力图展示：</strong>结合全国地理底图与业务后台数据库，搭建可交互动态热力图，直观呈现门店分布密度。<strong>门店距离匹配：</strong>测算门店间空间距离，对标竞品平台门店布局数据，圈定高优先级重点开拓区域，为业务战略规划提供方向参考。并针对业务空白区域抓取目标门店的名称、地址、联系电话等关键信息，输出标准化开拓线索清单。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目成果</div>
+                  <p>实现门店位置发布信息动态展示，输出网格化的地理分析数据，并且自动提供开拓清单，提升整体工作效率约90%+。</p>
+                </div>
+                <div class="project-metrics">
+                  <span class="metric-badge">效率提升 90%+</span>
+                  <span class="metric-badge">网格化分析</span>
+                </div>
+                <div class="project-tags">
+                  <span>Python</span><span>地图API</span><span>数据可视化</span><span>地理匹配</span>
+                </div>
+              </div>
+              <div class="project-visual-col">
+                <div class="project-gallery">
+                  <div class="project-gallery-title">项目成果展示</div>
+                  <div class="project-gallery-grid gallery-grid-2">
+                    <div class="project-gallery-item">
+                      <img src="https://www.coze.cn/s/rkION9Dkw_U/" alt="数据匹配图 - 门店数据与地理坐标匹配结果" loading="lazy" />
+                      <div class="gallery-caption">数据匹配与门店分布</div>
+                    </div>
+                    <div class="project-gallery-item">
+                      <img src="https://www.coze.cn/s/roO3dHpOkAc/" alt="门店合作地理分布热力图" loading="lazy" />
+                      <div class="gallery-caption">门店合作地理分布热力图</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 项目2：图表为视觉焦点，左右分栏 -->
+        <div class="tab-panel" id="project-2">
+          <div class="project-card project-layout-chart-focus">
+            <div class="project-header-full">
+              <div class="project-type">数据分析 · 课程实战</div>
+              <h3>电商平台数据爬取与分析 <span class="project-arrow">↗</span></h3>
+            </div>
+            <div class="project-split-content">
+              <div class="project-text-col">
+                <div class="project-detail">
+                  <div class="project-detail-label">项目背景</div>
+                  <p>数据分析课程实战项目，针对房产、图书两类平台开展定向数据采集与多维度业务分析。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目内容</div>
+                  <p><strong>数据爬取：</strong>使用Python编写爬虫脚本，定向采集安居客房源、当当网图书相关有效数据千余条。<strong>数据清洗：</strong>通过Pandas完成数据去重、缺失值填充、字段标准化等清洗工作，提升数据可用性。<strong>报告输出：</strong>结合Excel制作可视化图表，围绕价格、区域、销量等维度分析，输出完整分析报告并制作PPT进行演讲完成课程答辩。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目成果</div>
+                  <p>输出2份完整数据分析报告，数据清洗后有效率达92%，课程答辩获优秀评价，覆盖业务分析维度6个。</p>
+                </div>
+                <div class="project-metrics">
+                  <span class="metric-badge">有效率 92%</span>
+                  <span class="metric-badge">答辩优秀</span>
+                </div>
+                <div class="project-tags">
+                  <span>Python</span><span>Pandas</span><span>Excel</span><span>数据可视化</span>
+                </div>
+              </div>
+              <div class="project-visual-col visual-col-chart">
+                <div class="chart-showcase">
+                  <div class="chart-ring-large">
+                    <svg viewBox="0 0 120 120" aria-hidden="true">
+                      <circle class="chart-ring-bg-large" cx="60" cy="60" r="50" />
+                      <circle class="chart-ring-fill-large" cx="60" cy="60" r="50" data-percent="92" />
+                      <text class="chart-center-text-large" x="60" y="65">92%</text>
+                    </svg>
+                  </div>
+                  <div class="chart-showcase-info">
+                    <div class="chart-showcase-title">数据清洗有效率</div>
+                    <div class="chart-showcase-desc">千余条原始数据经去重、缺失值填充、字段标准化后，有效数据占比达92%</div>
+                  </div>
+                  <div class="float-tags-showcase">
+                    <span class="float-tag-showcase tag-gmv">GMV</span>
+                    <span class="float-tag-showcase tag-roi">ROI</span>
+                    <span class="float-tag-showcase tag-cac">CAC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 项目3：三栏卡片式布局 -->
+        <div class="tab-panel" id="project-3">
+          <div class="project-card project-layout-threecard">
+            <div class="project-header-full">
+              <div class="project-type">企业系统 · 课程实训</div>
+              <h3>SAP系统自行车企业运营模拟 <span class="project-arrow">↗</span></h3>
+            </div>
+            <div class="threecard-grid">
+              <div class="threecard-item card-blue">
+                <div class="card-color-band"></div>
+                <div class="card-body">
+                  <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="5.5" cy="17.5" r="3.5"/>
+                      <circle cx="18.5" cy="17.5" r="3.5"/>
+                      <path d="M15 6l-3 11.5"/>
+                      <path d="M15 6h3l2 5h-5"/>
+                      <path d="M5.5 17.5L9 8l3 3"/>
+                      <path d="M9 8h4"/>
+                    </svg>
+                  </div>
+                  <div class="card-title">项目背景</div>
+                  <p>ERP课程实训项目，模拟自行车制造企业全流程运营，完成全链路业务数据管理与流程梳理。</p>
+                </div>
+              </div>
+              <div class="threecard-item card-purple">
+                <div class="card-color-band"></div>
+                <div class="card-body">
+                  <div class="card-icon">⚙️</div>
+                  <div class="card-title">项目内容</div>
+                  <p><strong>主数据维护：</strong>在SAP系统中搭建并维护自行车零部件、成品物料主数据，保障基础数据规范统一。<strong>全流程实操：</strong>完整执行采购订单创建、原料入库、生产订单下达、组装投产、库存盘点、成本结算全流程操作。<strong>运营分析：</strong>同步记录各环节业务数据，跟踪库存变动与生产成本，梳理运营流程数据节点。</p>
+                </div>
+              </div>
+              <div class="threecard-item card-green">
+                <div class="card-color-band"></div>
+                <div class="card-body">
+                  <div class="card-icon">🎯</div>
+                  <div class="card-title">项目成果</div>
+                  <p>完整跑通制造企业运营全流程，输出ERP运营分析报告，模拟周期内库存账实相符率100%，生产成本核算误差低于1%。</p>
+                  <div class="card-metrics">
+                    <span class="metric-badge">账实相符 100%</span>
+                    <span class="metric-badge">误差 &lt;1%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>SAP ERP</span><span>主数据维护</span><span>流程管理</span><span>成本核算</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 项目4：两栏布局，左栏文字，右栏成果 -->
+        <div class="tab-panel" id="project-4">
+          <div class="project-card project-layout-two-col">
+            <div class="project-header-full">
+              <div class="project-type">Web全栈 · 独立开发</div>
+              <h3>博客与宠物寄养网站开发 <span class="project-arrow">↗</span></h3>
+            </div>
+            <div class="project-two-col-content">
+              <div class="col-text">
+                <div class="project-detail">
+                  <div class="project-detail-label">项目背景</div>
+                  <p>Web开发课程独立实践项目，目标实现具备用户交互与数据存储能力的功能性网站。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目内容</div>
+                  <p><strong>前端开发：</strong>基于HTML、CSS完成页面布局与样式设计，使用JavaScript实现页面交互效果，适配多终端页面展示。<strong>数据库对接：</strong>设计用户账号、博客内容、宠物寄养信息三类MySQL数据表，完成前后端数据连通，支持数据本地存储与读写。<strong>功能实现：</strong>开发用户登录注册、内容发布编辑、寄养信息提交查询等核心功能，完成全流程交互逻辑调试。</p>
+                </div>
+              </div>
+              <div class="col-visual">
+                <div class="result-showcase">
+                  <div class="result-icon">🏆</div>
+                  <div class="result-title">项目成果</div>
+                  <p>项目获评课程最高档次成绩，实现7个核心功能模块，全流程数据读写稳定，页面交互响应流畅。</p>
+                  <div class="project-metrics">
+                    <span class="metric-badge">7个功能模块</span>
+                    <span class="metric-badge">最高档成绩</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>MySQL</span><span>全栈开发</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 项目5：图片铺满顶部，下方左右分栏 -->
+        <div class="tab-panel" id="project-5">
+          <div class="project-card project-layout-image-top">
+            <div class="project-header-full">
+              <div class="project-type">AI应用 · 企业效能</div>
+              <h3>自动客服智能体 <span class="project-arrow">↗</span></h3>
+            </div>
+            <div class="project-image-top-gallery">
+              <div class="project-gallery-item gallery-item-full">
+                <img src="https://www.coze.cn/s/z3ahhh5MC5c/" alt="客服回复助手界面 - 智能话术生成与知识库查询" loading="lazy" />
+                <div class="gallery-caption">AI客服回复助手 · 智能话术生成与知识库</div>
+              </div>
+            </div>
+            <div class="project-split-content">
+              <div class="project-text-col">
+                <div class="project-detail">
+                  <div class="project-detail-label">项目背景</div>
+                  <p>公司面向大量B端车后服务门店开展业务，存在大量标准化话术、重复咨询工作。希望依托AI智能体承接重复性事务，降低人力负担，实现业务减负增效。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目内容</div>
+                  <p><strong>数据集构建：</strong>采集公开服务业通用话术，整合企业内部业务规则，导出工作微信历史对话记录，整理、构建可供AI训练学习的业务数据集。<strong>AI智能体开发：</strong>配置AI智能体自动化执行能力，接入企业专属知识库，定制回复策略、应答模板以及违禁词过滤规则；针对商户咨询，输出带情感适配的标准化答复，同步完成业务信息采集。</p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail-label">项目成果</div>
+                  <p>搭建完成半自动化AI客服智能体；梳理沉淀碎片化业务资料，建成可快速检索的电子知识库；同时可作为新人业务带教工具，整体业务处理效率提升72%。</p>
+                </div>
+                <div class="project-metrics">
+                  <span class="metric-badge">效率提升 72%</span>
+                  <span class="metric-badge">AI知识库</span>
+                  <span class="metric-badge">带教工具</span>
+                </div>
+                <div class="project-tags">
+                  <span>AI智能体</span><span>知识库构建</span><span>话术定制</span><span>业务提效</span>
+                </div>
+              </div>
+              <div class="project-visual-col visual-col-chart">
+                <div class="chart-showcase">
+                  <div class="chart-ring-large">
+                    <svg viewBox="0 0 120 120" aria-hidden="true">
+                      <circle class="chart-ring-bg-large" cx="60" cy="60" r="50" />
+                      <circle class="chart-ring-fill-large green" cx="60" cy="60" r="50" data-percent="72" />
+                      <text class="chart-center-text-large" x="60" y="65">72%</text>
+                    </svg>
+                  </div>
+                  <div class="chart-showcase-info">
+                    <div class="chart-showcase-title">业务处理效率提升</div>
+                    <div class="chart-showcase-desc">AI智能体承接重复咨询后，整体业务处理效率较人工提升72%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 商业海报设计 -->
+  <section id="posters">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">商业海报设计</h2>
+        <p class="section-subtitle">独立设计制作的服务报价与合作推广海报，点击可放大查看</p>
+      </div>
+      <div class="poster-grid reveal">
+        <div class="poster-card">
+          <img src="https://www.coze.cn/s/7YzjkFoJgDA/" alt="浙江地区服务报价海报 - 普通洗车20元、喷漆180元" loading="lazy" />
+          <div class="poster-caption">浙江地区 · 服务报价</div>
+        </div>
+        <div class="poster-card">
+          <img src="https://www.coze.cn/s/_JLfcOATHlg/" alt="广东地区车后服务合作报价海报 - 洗车、保养、喷漆等服务" loading="lazy" />
+          <div class="poster-caption">广东地区 · 合作报价</div>
+        </div>
+        <div class="poster-card">
+          <img src="https://www.coze.cn/s/xzY7XZD-4aw/" alt="云南地区服务报价海报 - 洗车、喷漆、保养全包等服务" loading="lazy" />
+          <div class="poster-caption">云南地区 · 服务报价</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 灯箱 -->
+  <div class="lightbox" id="lightbox-overlay" role="dialog" aria-label="图片预览">
+    <button class="lightbox-close" id="lightbox-close" aria-label="关闭预览">✕</button>
+    <img class="lightbox-img" id="lightbox-img" src="https://www.coze.cn/s/7YzjkFoJgDA/" alt="海报大图预览" />
+  </div>
+
+  <!-- 教育背景 -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">教育背景</h2>
+        <p class="section-subtitle">中澳双学位联合培养，兼具专业素养与国际化视野</p>
+      </div>
+      <div class="edu-section reveal">
+        <div class="edu-schools">
+          <div class="edu-school">
+            <div class="edu-school-icon">🎓</div>
+            <h3>上海海洋大学</h3>
+            <div class="edu-major">信息管理与信息系统</div>
+            <div class="edu-date">2020.09 – 2024.06</div>
+            <span class="edu-badge">双一流 · 已毕业</span>
+          </div>
+          <div class="edu-school">
+            <div class="edu-school-icon">🌏</div>
+            <h3>塔斯马尼亚大学</h3>
+            <div class="edu-major">Information Systems（双学位）</div>
+            <div class="edu-date">中外合作联合培养</div>
+            <span class="edu-badge">中澳双学位</span>
+          </div>
+        </div>
+        <div class="edu-courses">
+          <div class="edu-courses-title">主修课程</div>
+          <div class="course-tags">
+            <span class="course-tag">企业运营管理</span>
+            <span class="course-tag">市场营销</span>
+            <span class="course-tag">管理学原理</span>
+            <span class="course-tag">工商管理基础</span>
+            <span class="course-tag">ERP企业管理</span>
+            <span class="course-tag">信息和通信技术管理</span>
+            <span class="course-tag">C语言</span>
+            <span class="course-tag">Java</span>
+            <span class="course-tag">动态WEB开发</span>
+            <span class="course-tag">MySQL</span>
+            <span class="course-tag">Oracle数据库</span>
+            <span class="course-tag">Python爬虫数据分析</span>
+            <span class="course-tag">数据结构</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专业技能 -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">专业技能</h2>
+        <p class="section-subtitle">覆盖数据分析、办公自动化、Web开发与编程语言</p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-item reveal">
+          <div class="skill-header">
+            <span class="skill-name">数据分析</span>
+            <span class="skill-level">精通</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+          <div class="skill-tags">
+            <span>Excel高级函数</span><span>Power Query</span><span>Power BI</span><span>Python Pandas</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-header">
+            <span class="skill-name">办公自动化</span>
+            <span class="skill-level">熟练</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+          <div class="skill-tags">
+            <span>Office全套</span><span>飞书</span><span>AI Agent</span><span>PS</span><span>剪映</span>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-header">
+            <span class="skill-name">Web开发</span>
+            <span class="skill-level">熟练</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          <div class="skill-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-header">
+            <span class="skill-name">编程语言</span>
+            <span class="skill-level">掌握</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+          <div class="skill-tags">
+            <span>Python</span><span>C</span><span>Java</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-header">
+            <span class="skill-name">SAP ERP</span>
+            <span class="skill-level">掌握</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+          <div class="skill-tags">
+            <span>主数据维护</span><span>采购流程</span><span>生产订单</span><span>成本核算</span>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-header">
+            <span class="skill-name">数据清洗</span>
+            <span class="skill-level">精通</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+          <div class="skill-tags">
+            <span>去重</span><span>缺失值处理</span><span>格式标准化</span><span>异常值处理</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 资质证书 -->
+      <div class="certs-row reveal" style="margin-top: 36px;">
+        <div class="cert-badge"><span class="cert-icon">📝</span> 英语六级证书</div>
+        <div class="cert-badge"><span class="cert-icon">🤖</span> 人工智能推介官证书</div>
+        <div class="cert-badge"><span class="cert-icon">🏅</span> 社工证</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">联系方式</h2>
+        <p class="section-subtitle">随时欢迎交流，期待与您共创价值</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-label">现居城市</div>
+          <div class="contact-value">上海</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-label">电话</div>
+          <div class="contact-value">13661441861</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-label">邮箱</div>
+          <div class="contact-value">1912476607@qq.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 张俊制作 · 本网页仅供投递简历使用</p>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // 平滑滚动函数
+  window.smoothScrollTo = function(event, targetId) {
+    event.preventDefault();
+    var target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  try {
+    // 数字计数器动画
+    var statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    var statsAnimated = false;
+
+    function animateNumbers() {
+      if (statsAnimated) return;
+      statsAnimated = true;
+      statNumbers.forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 1500;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target) + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      });
+    }
+
+    // 检测数字区域是否进入视口
+    var statsSection = document.querySelector('.hero-stats');
+    if (statsSection && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            animateNumbers();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(statsSection);
+    } else {
+      animateNumbers();
+    }
+
+    // 滚动显示动画
+    var reveals = document.querySelectorAll('.reveal');
+    var timelineItems = document.querySelectorAll('.timeline-item');
+
+    if ('IntersectionObserver' in window) {
+      var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(function(el) { revealObserver.observe(el); });
+      timelineItems.forEach(function(el) { revealObserver.observe(el); });
+    } else {
+      reveals.forEach(function(el) { el.classList.add('visible'); });
+      timelineItems.forEach(function(el) { el.classList.add('visible'); });
+    }
+
+    // 技能进度条动画
+    var skillBars = document.querySelectorAll('.skill-bar-fill');
+    if ('IntersectionObserver' in window) {
+      var skillObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var width = entry.target.getAttribute('data-width');
+            entry.target.style.width = width + '%';
+            skillObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      skillBars.forEach(function(el) { skillObserver.observe(el); });
+    } else {
+      skillBars.forEach(function(el) {
+        el.style.width = el.getAttribute('data-width') + '%';
+      });
+    }
+
+    // 导航激活状态
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-links a');
+
+    function updateNav() {
+      var scrollY = window.scrollY + 100;
+      sections.forEach(function(section) {
+        var top = section.offsetTop;
+        var height = section.offsetHeight;
+        var id = section.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+          navLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+    var scrollTimer;
+    window.addEventListener('scroll', function() {
+      if (scrollTimer) cancelAnimationFrame(scrollTimer);
+      scrollTimer = requestAnimationFrame(updateNav);
+    }, { passive: true });
+
+    // 移动端导航切换
+    var navToggle = document.querySelector('.nav-toggle');
+    var navLinksEl = document.querySelector('.nav-links');
+    if (navToggle && navLinksEl) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = navLinksEl.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      // 点击链接后关闭菜单
+      navLinksEl.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navLinksEl.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // 页内平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var targetId = this.getAttribute('href');
+        if (targetId && targetId.length > 1) {
+          var targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // 海报灯箱
+    var lightboxOverlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxClose = document.getElementById('lightbox-close');
+    if (lightboxOverlay && lightboxImg && lightboxClose) {
+      var posterImages = document.querySelectorAll('.poster-card img');
+      var galleryImages = document.querySelectorAll('.project-gallery-item img');
+      var allImages = Array.from(posterImages).concat(Array.from(galleryImages));
+      allImages.forEach(function(img) {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+          lightboxImg.src = this.src;
+          lightboxOverlay.style.opacity = '1';
+          lightboxOverlay.style.visibility = 'visible';
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      function closeLightbox() {
+        lightboxOverlay.style.opacity = '0';
+        lightboxOverlay.style.visibility = 'hidden';
+        document.body.style.overflow = '';
+        setTimeout(function() { lightboxImg.src = ''; }, 300);
+      }
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxOverlay.addEventListener('click', function(e) {
+        if (e.target === lightboxOverlay) closeLightbox();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    }
+  } catch (err) {
+    // 脚本失败时静态内容仍完整可读
+  }
+})();
+  // 视频灯箱控制
+  function openVideoLightbox() {
+    document.getElementById('videoLightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoLightbox(e) {
+    if (e.target.id === 'videoLightbox' || e.target.closest('.lightbox-close')) {
+      const lightbox = document.getElementById('videoLightbox');
+      lightbox.classList.remove('active');
+      const video = lightbox.querySelector('video');
+      video.pause();
+      video.currentTime = 0;
+      document.body.style.overflow = '';
+    }
+  }
+
+  // ESC 键关闭灯箱
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      const lightbox = document.getElementById('videoLightbox');
+      if (lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        const video = lightbox.querySelector('video');
+        video.pause();
+        video.currentTime = 0;
+        document.body.style.overflow = '';
+      }
+    }
+  });
+
+  // ========== 项目经历 Tab 切换（缩放淡入效果） ==========
+  (function() {
+    const tabNav = document.querySelector('.project-tabs-nav');
+    if (!tabNav) return;
+    const tabBtns = tabNav.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    let isAnimating = false;
+
+    tabBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (isAnimating) return;
+        const targetId = this.getAttribute('data-tab');
+        const currentActive = document.querySelector('.tab-panel.active');
+        const targetPanel = document.getElementById(targetId);
+
+        if (!targetPanel || currentActive === targetPanel) return;
+
+        // 切换按钮状态
+        tabBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+
+        // 退出动画：当前面板缩小淡出
+        isAnimating = true;
+        currentActive.classList.add('scale-out');
+
+        setTimeout(function() {
+          // 移除旧面板
+          currentActive.classList.remove('active', 'scale-out');
+
+          // 进入动画：新面板放大淡入
+          targetPanel.classList.add('active', 'scale-in');
+
+          // 如果切换到电商数据项目，触发环形图表动画
+          if (targetId === 'project-2') {
+            const ringFill = targetPanel.querySelector('.chart-ring-fill-large');
+            if (ringFill) {
+              const percent = ringFill.getAttribute('data-percent');
+              const circumference = 2 * Math.PI * 50; // r=50
+              const offset = circumference - (percent / 100) * circumference;
+              setTimeout(function() {
+                ringFill.style.strokeDashoffset = offset;
+              }, 300);
+            }
+          }
+
+          // 如果切换到智能客服项目，触发环形图表动画
+          if (targetId === 'project-5') {
+            const ringFill = targetPanel.querySelector('.chart-ring-fill-large');
+            if (ringFill) {
+              const percent = ringFill.getAttribute('data-percent');
+              const circumference = 2 * Math.PI * 50;
+              const offset = circumference - (percent / 100) * circumference;
+              setTimeout(function() {
+                ringFill.style.strokeDashoffset = offset;
+              }, 300);
+            }
+          }
+
+          setTimeout(function() {
+            targetPanel.classList.remove('scale-in');
+            isAnimating = false;
+          }, 450);
+        }, 300);
+      });
+    });
+  })();
+
+</script>
+</body>
+</html>
