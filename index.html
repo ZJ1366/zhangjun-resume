@@ -2200,30 +2200,87 @@ footer {
   .core-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* 修复移动端排版 */
+  .hero {
+    margin-top: 0;
+    min-height: auto;
+    padding: 80px 16px 40px;
+  }
+
+  .hero-name {
+    font-size: clamp(32px, 10vw, 48px);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(14px, 4vw, 18px);
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero-tags {
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+
+  .hero-timeline-bar {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  .timeline-connector {
+    width: 2px;
+    height: 20px;
+    margin-bottom: 0;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-tags-left {
+    justify-content: center;
+  }
+
+  .about-video {
+    margin-top: 30px;
+  }
+
+  .video-preview video {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-timeline-bar {
     gap: 0;
+    padding: 0;
   }
 
   .timeline-connector {
-    width: 20px;
-    margin-bottom: 26px;
+    width: 2px;
+    height: 16px;
+    margin-bottom: 0;
   }
 
   .timeline-node {
-    padding: 10px 8px;
+    padding: 8px 6px;
   }
 
   .timeline-node-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 15px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 
   .node-label {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .node-sub {
@@ -2240,6 +2297,15 @@ footer {
 
   .core-card p {
     font-size: 12px;
+  }
+
+  .poster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-tag {
+    font-size: 12px;
+    padding: 4px 10px;
   }
 }
 
@@ -2514,7 +2580,7 @@ footer {
         <path d="M18 6L6 18M6 6l12 12"/>
       </svg>
     </button>
-    <video controls autoplay>
+    <video controls>
       <source src="https://github.com/ZJ1366/zhangjun-resume/releases/download/v1.0/self-intro.mp4" type="video/mp4">
     </video>
   </div>
@@ -2547,19 +2613,10 @@ footer {
     </div>
     <!-- 自我介绍视频 -->
     <div class="about-video">
-      <div class="video-preview" onclick="openVideoLightbox()">
-        <video muted loop playsinline>
+      <div class="video-preview">
+        <video controls preload="metadata">
           <source src="https://github.com/ZJ1366/zhangjun-resume/releases/download/v1.0/self-intro.mp4" type="video/mp4">
         </video>
-        <div class="video-overlay">
-          <div class="play-btn">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-              <circle cx="30" cy="30" r="28" fill="white" fill-opacity="0.95"/>
-              <path d="M24 18L44 30L24 42V18Z" fill="#3b82f6"/>
-            </svg>
-          </div>
-          <span class="video-hint">点击观看趣味介绍视频</span>
-        </div>
       </div>
     </div>
   </section>
